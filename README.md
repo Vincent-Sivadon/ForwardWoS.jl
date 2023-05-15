@@ -34,10 +34,10 @@ Because we gavee the `ForwardWoS.Problem` a function f, the solver will use a st
 
 The dimensions are handled in a generic way, so the possible modelisations are : 2D grid & scalar solution, 3D grid & 2D vector solution... The GPU version can for now only handle 2D grid & scalar solution. Some examples below (the plots are also generic on the solution dimension, but you must specify ForwardWoS.plot2D or plot3D because it will then use CairoMakie or GLMakie).
 
-![OneWalk](Figures/2Dscalar.png)
-![OneWalk](Figures/2Dvector.png)
-![OneWalk](Figures/3Dscalar.png)
-![OneWalk](Figures/3Dvector.png)
+![2Dscalar](figures/2Dscalar.png)
+![2Dvector](figures/2Dvector.png)
+![3Dscalar](figures/3Dscalar.png)
+![3Dvector](figures/3Dvector.png)
 
 # Bibliography
 Mainly based on the paper :
