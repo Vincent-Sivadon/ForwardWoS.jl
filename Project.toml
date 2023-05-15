@@ -1,0 +1,4 @@
+name = "ForwardWoS"
+uuid = "b3f28f71-d675-462a-908a-cb6ca870941b"
+authors = ["Vincent-Sivadon <vincent.sivadon@laposte.net>"]
+version = "0.1.0"
