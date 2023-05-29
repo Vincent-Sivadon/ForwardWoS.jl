@@ -2,22 +2,21 @@ using ForwardWoS
 using CairoMakie
 
 # Problem Defintion
-s(x,y) = 1.  # Uniform heating
+f(x,y) = 1.  # Uniform heating
 g(x,y) = 0.  # Cold borders
-function sdf(x,y,Lx=1,Ly=1)
-    vx = abs(x)-Lx ; vy = abs(y)-Ly ;
+function sdf(x,y)
+    vx = abs(x)-1 ; vy = abs(y)-1 ;
     dx = max(vx,0)  ; dy = max(vy,0)
     - (sqrt(dx*dx + dy*dy) + min(max(vx,vy),0))
 end
 Ω = ((-1,1),(-1,1))
-p = ForwardWoS.Problem(s,g,sdf,Ω)
+p = ForwardWoS.Problem(f,g,Ω,sdf)
 
 # Solving
-axs,u = ForwardWoS.SolveGPU(p,ngrid=200,nwalks=1000)
+axs,u = ForwardWoS.SolveGPU(p,ngrid=200,nwalks=200)
 
 # Display
-fig, = ForwardWoS.plot2D(axs,u)
-fig
+ForwardWoS.plot2D(axs,u)
 
 # surface(x,y,u)
 # Analytical Solution

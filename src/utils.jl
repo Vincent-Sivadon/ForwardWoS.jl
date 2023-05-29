@@ -43,8 +43,8 @@ function rand_in_ball(cx,cy,cz,r)
     cx+ρ*sin(θ)*cos(ϕ), cy+ρ*sin(θ)*sin(ϕ), cz+ρ*cos(θ)
 end
 
+rpG(r,R) = r * (log(R/r) / 2π) / (R^2/4.)
 
-rpG(r,R) = 2r/(π*R^2) * log(R/r)
 # importance sampling Green's Function
 function rand_in_ball_is(cx,cy,R)
     # Maximum of distribution rpG = r*G/∫G

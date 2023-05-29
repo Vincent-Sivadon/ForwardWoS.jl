@@ -1,7 +1,3 @@
-@info "Loading ForwardWoS 2D plot utilities"
-
-using .CairoMakie
-
 "Plot WoS 2D solutions"
 function plot2D(axs,u;kwargs...)
     CairoMakie.activate!()
@@ -49,7 +45,7 @@ function plot2Dvector(axs,u;kwargs...)
     uy[abs.(uy).<=1e-10] .= NaN
     strength = vec(sqrt.(ux.^2 .+ uy .^ 2))
     
-    f = Figure(resolution=(600,600))
+    f = Figure(resolution=(700,700))
     ax = Axis(
         f[1,1], title="2D vector field",
         xlabel="x", ylabel="y",

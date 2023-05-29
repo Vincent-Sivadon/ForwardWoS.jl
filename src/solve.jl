@@ -28,7 +28,7 @@ function SolveGPU(p::Problem; ngrid=50, nwalks=200, ϵ=0.001)
     if idim==2 && odim==1 # 2D scalar
         return GPU_2Dscalar(p,axs,u,nwalks,ϵ)
     else
-        printf("WalkOnSphereSim Error : can't handle those dimensions")
+        println("WalkOnSphereSim Error : can't handle those dimensions")
         return
     end
 end
